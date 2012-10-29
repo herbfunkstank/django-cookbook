@@ -14,3 +14,5 @@ Database import with 3 German recipes: import.json
 Setup local_settings.py to hold local development environment settings for best practice.
 
 De-coupled URLconf and Templates for best practice DRY.
+
+Added staticfiles and HTML5 Boiler.
