@@ -149,3 +149,9 @@ LOGGING = {
         },
     }
 }
+
+# Local Settings 
+try:
+	from local_settings import *
+except ImportError:
+	pass

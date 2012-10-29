@@ -55,3 +55,7 @@ class Recipe(models.Model):
 			self.date_created = now()
 		self.date_updated = now()
 		super(Recipe, self).save(*args, **kwargs)
+		
+	@models.permalink
+	def get_absolute_url(self):
+		return ('recipes_recipe_detail', (), { 'slug': self.slug })
