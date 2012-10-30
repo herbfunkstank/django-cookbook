@@ -4,6 +4,7 @@
 
 {% block content %}
 <h2>All Recipes</h2>
+<a href="{% url recipes_recipe_add %}">Add Recipe</a>
 <ul>
 	{% for recipe in object_list %}
 	<li><a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a></li>

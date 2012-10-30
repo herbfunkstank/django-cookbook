@@ -115,8 +115,13 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    'recipes'
+    'recipes',
+    'userauth',
 )
+
+LOGIN_URL = '/user/login/'
+LOGOUT_URL = '/user/logout/'
+LOGIN_REDIRECT_URL = '/'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

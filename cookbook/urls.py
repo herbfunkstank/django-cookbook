@@ -7,5 +7,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     
+    url(r'^user/', include('userauth.urls')),
+    
     url(r'^', include('recipes.urls')),
+   
 )
