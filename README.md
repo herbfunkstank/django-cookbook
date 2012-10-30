@@ -4,20 +4,24 @@
 
 I created this just to demonstrate what I can do:
 
-Add recipes to your cookbook through superuser login to admin interface
+### Created Middleware to handle 403 errors
 
-Database backup with banana pancakes and hummus recipes: backup.json
+Replaced index and detail functions with class-based-generic-views
 
-Database import with 3 German recipes: import.json
-
-Setup local_settings.py to hold local development environment settings for best practice.
-
-De-coupled URLconf and templates for best practice - DRY.
-
-Added staticfiles and HTML5 Boiler.
-
-Created userauth to extend django.contrib.auth and provide user management.
+Added frontend forms for adding and editing recipes to cookbook for users.
 
 Updated render_to_response to render shortcut - DRY.
 
-Added frontend forms for adding and editing recipes to cookbook for users.
+Created userauth to extend django.contrib.auth and provide user management.
+
+Added staticfiles and HTML5 Boiler.
+
+De-coupled URLconf and templates for best practice - DRY.
+
+Database import with 3 German recipes: import.json
+
+Database backup with banana pancakes and hummus recipes: backup.json
+
+Setup local_settings.py to hold local development environment settings for best practice.
+
+Add recipes to your cookbook through superuser login to admin interface

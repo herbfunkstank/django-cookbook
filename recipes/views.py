@@ -2,14 +2,27 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseForbidden, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
+from django.views.generic import DetailView, ListView
 
+# Data models and forms
 from recipes.models import Recipe
 from recipes.forms import RecipeForm
 
-def index(request):
-    recipes = Recipe.objects.all()
-    return render(request, 'recipes/index.html',	
-		{'object_list': recipes})
+# Logging
+import logging
+logger = logging.getLogger(__name__)
+
+class RecipeListView(ListView):
+	template_name = 'recipes/index.html'
+	
+	def get_queryset(self):
+		recipes = Recipe.objects.all()
+		logger.debug('Number of Recipes: %d' % recipes.count())
+		return recipes
+		
+class RecipeDetailView(DetailView):
+	model = Recipe
+	template_name = 'recipes/detail.html'
 
 
 def detail(request, slug):
