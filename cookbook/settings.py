@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     'userauth', # user management
     'news',
     'south', # database migration
+    'tastypie', # tastypie RESTful web service
 )
 
 LOGIN_URL = '/user/login/'

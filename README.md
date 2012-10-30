@@ -5,6 +5,8 @@
 ### I created this site to demonstrate what I can do.  I list features
 ### here as I add them to the site.
 
+Installed Tastypie for RESTful web service
+
 Created RSS feed for news app
 
 Extended Recipe model with custom manager ActiveRecipeManager
