@@ -22,6 +22,9 @@ DATABASES = {
     }
 }
 
+DATABASE_ROUTERS = [ 'cookbook.router.CookbookRouter' ]
+
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -114,10 +117,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    'recipes',
-    'userauth',
+    'recipes', # recipes for cookbook
+    'userauth', # user management
+    'news',
+    'south', # database migration
 )
 
 LOGIN_URL = '/user/login/'

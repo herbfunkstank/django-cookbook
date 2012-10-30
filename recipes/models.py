@@ -19,6 +19,8 @@ class Category(models.Model):
 
 class Recipe(models.Model):
 	""" Recipe model. """
+	is_active = models.BooleanField(u'Active')
+	
 	DIFFICULTY_EASY = 1
 	DIFFICULTY_MEDIUM = 2
 	DIFFICULTY_HARD = 3

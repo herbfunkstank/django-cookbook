@@ -1,10 +1,21 @@
 ### README.md for Cookbook - Django 1.4.2
-# Based on cookbook app found here: 
+# Based on a German cookbook webapp tutorial found here: 
 [http://django-workshop.de](http://django-workshop.de)
 
-I created this just to demonstrate what I can do:
+### I created this just to demonstrate what I can do.  I list features
+### here as I add them to the site.
 
-### Created Middleware to handle 403 errors
+Created news app
+
+Setup South to handle database migrations
+
+Created router.py to manage multiple databases for the site
+
+Created second database for news app
+
+Improved templates to show author, difficulty, and categories.
+
+Created Middleware to handle 403 errors
 
 Replaced index and detail functions with class-based-generic-views
 
@@ -24,4 +35,4 @@ Database backup with banana pancakes and hummus recipes: backup.json
 
 Setup local_settings.py to hold local development environment settings for best practice.
 
-Add recipes to your cookbook through superuser login to admin interface
+Add recipes to your cookbook through admin interface
