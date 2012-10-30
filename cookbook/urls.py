@@ -9,6 +9,9 @@ urlpatterns = patterns('',
     
     url(r'^user/', include('userauth.urls')),
     
+    url(r'^news/', include('news.urls')),
+    
     url(r'^', include('recipes.urls')),
-   
+ 
+	
 )

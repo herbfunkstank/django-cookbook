@@ -20,6 +20,7 @@ class Migration(SchemaMigration):
         # Adding model 'Recipe'
         db.create_table('recipes_recipe', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('is_active', self.gf('django.db.models.fields.BooleanField')(default=False)),
             ('title', self.gf('django.db.models.fields.CharField')(max_length=255)),
             ('slug', self.gf('django.db.models.fields.SlugField')(unique=True, max_length=50)),
             ('ingredients', self.gf('django.db.models.fields.TextField')()),
@@ -106,6 +107,7 @@ class Migration(SchemaMigration):
             'difficulty': ('django.db.models.fields.SmallIntegerField', [], {'default': '2'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'ingredients': ('django.db.models.fields.TextField', [], {}),
+            'is_active': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'number_of_portions': ('django.db.models.fields.PositiveIntegerField', [], {}),
             'preparation': ('django.db.models.fields.TextField', [], {}),
             'slug': ('django.db.models.fields.SlugField', [], {'unique': 'True', 'max_length': '50'}),

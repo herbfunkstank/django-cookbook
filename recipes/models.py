@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.timezone import now
 
+
 class Category(models.Model):
 	"""Category model."""
 	name = models.CharField(u'Name', max_length=100)
@@ -16,10 +17,22 @@ class Category(models.Model):
 	def __unicode__(self):
 		return self.name
 
+class ActiveRecipeManager(models.Manager):
+	def get_query_set(self):
+		return super(ActiveRecipeManager, self).get_query_set().filter(is_active=True)
 
 class Recipe(models.Model):
 	""" Recipe model. """
 	is_active = models.BooleanField(u'Active')
+	
+	objects = models.Manager()
+	active = ActiveRecipeManager()
+	
+	def get_related_recipes(self):
+		categories = self.category.all()
+		related_recipes = Recipe.active.all().filter(
+			difficulty_exact=self.difficulty, category_in=categories)
+		return related_recipes.exclude(pk=self.id).distinct()
 	
 	DIFFICULTY_EASY = 1
 	DIFFICULTY_MEDIUM = 2

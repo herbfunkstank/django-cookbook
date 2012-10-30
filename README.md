@@ -2,8 +2,12 @@
 # Based on a German cookbook webapp tutorial found here: 
 [http://django-workshop.de](http://django-workshop.de)
 
-### I created this just to demonstrate what I can do.  I list features
+### I created this site to demonstrate what I can do.  I list features
 ### here as I add them to the site.
+
+Created RSS feed for news app
+
+Extended Recipe model with custom manager ActiveRecipeManager
 
 Created news app
 
@@ -13,7 +17,7 @@ Created router.py to manage multiple databases for the site
 
 Created second database for news app
 
-Improved templates to show author, difficulty, and categories.
+Improved templates to show author, difficulty and categories.
 
 Created Middleware to handle 403 errors
 

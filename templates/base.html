@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
     <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
         
-	
+	<!-- RSS Feed -->
+	<link rel='alternate' type='application/rss+xml'
+		title='News from the Cookbook' href='{% url news_article_feed %}' />
 </head>
 <body>
 	<!--[if lt IE 7]>

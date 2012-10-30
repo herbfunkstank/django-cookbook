@@ -16,12 +16,12 @@ class RecipeListView(ListView):
 	template_name = 'recipes/index.html'
 	
 	def get_queryset(self):
-		recipes = Recipe.objects.all()
+		recipes = Recipe.active.all()
 		logger.debug('Number of Recipes: %d' % recipes.count())
 		return recipes
 		
 class RecipeDetailView(DetailView):
-	model = Recipe
+	queryset = Recipe.active.all()
 	template_name = 'recipes/detail.html'
 
 

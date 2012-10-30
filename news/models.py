@@ -12,5 +12,9 @@ class Article(DateTimeInfo):
 		verbose_name_plural=u'Articles'
 		ordering = ['-date_updated']
 		
-	def __unicode__(self_):
+	def __unicode__(self):
 		return self.headline
+
+	@models.permalink
+	def get_absolute_url(self):
+		return ('news_article_detail', (), {'pk': self.pk})

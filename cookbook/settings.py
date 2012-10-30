@@ -128,6 +128,8 @@ LOGIN_URL = '/user/login/'
 LOGOUT_URL = '/user/logout/'
 LOGIN_REDIRECT_URL = '/'
 
+NEWS_FEED_COUNT = 5
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

@@ -7,7 +7,7 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 
 class RecipeAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ['title']}
+	prepopulated_fields = {'slug': ['title']}
 
 
 admin.site.register(Recipe, RecipeAdmin)
